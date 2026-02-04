@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamazon Customer Support Agent</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🛒 Shamazon Customer Support Agent</h1>
+        <p class="subtitle">AI-Powered Order Status Assistance</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="email">📧 Email Simulator</button>
+        <button class="tab-btn" data-tab="graph">🔀 Agent Graph</button>
+        <button class="tab-btn" data-tab="data">📊 Data Viewer</button>
+        <button class="tab-btn" data-tab="queue">📋 Human Queue</button>
+    </nav>
+
+    <main>
+        <!-- Email Simulator Tab -->
+        <section id="email-tab" class="tab-content active">
+            <div class="email-container">
+                <div class="email-form-section">
+                    <h2>Send Email</h2>
+                    <div class="presets">
+                        <label>Test Scenarios:</label>
+                        <select id="preset-select">
+                            <option value="">-- Select a preset --</option>
+                            <option value="order_status">Order Status Query (Valid User)</option>
+                            <option value="unknown_user">Unknown User Email</option>
+                            <option value="refund_request">Refund Request (Human Queue)</option>
+                            <option value="prompt_injection">Prompt Injection Attempt</option>
+                            <option value="out_of_scope">Out of Scope Query</option>
+                        </select>
+                    </div>
+                    <form id="email-form">
+                        <div class="form-group">
+                            <label for="sender-email">From Email:</label>
+                            <input type="email" id="sender-email" required placeholder="customer@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" required placeholder="Order inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Message:</label>
+                            <textarea id="body" rows="6" required placeholder="Type your message..."></textarea>
+                        </div>
+                        <button type="submit" id="send-btn">Send Email</button>
+                    </form>
+                </div>
+
+                <div class="response-section">
+                    <h2>Response</h2>
+                    <div id="response-container">
+                        <div class="placeholder">Response will appear here after processing...</div>
+                    </div>
+
+                    <h2>Execution Trace</h2>
+                    <div id="trace-container">
+                        <div class="placeholder">Execution trace will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Graph Tab -->
+        <section id="graph-tab" class="tab-content">
+            <h2>Agent Workflow Graph</h2>
+            <div id="graph-container">
+                <div class="mermaid" id="mermaid-graph"></div>
+            </div>
+            <div class="graph-legend">
+                <h3>Legend</h3>
+                <ul>
+                    <li><span class="legend-box guardrail"></span> Guardrail Nodes (Validation)</li>
+                    <li><span class="legend-box agent"></span> Agent Node (Main Processing)</li>
+                    <li><span class="legend-box action"></span> Action Nodes (Send/Queue)</li>
+                    <li><span class="legend-box terminal"></span> Terminal Nodes</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Data Viewer Tab -->
+        <section id="data-tab" class="tab-content">
+            <div class="data-sections">
+                <div class="data-section">
+                    <h2>Users</h2>
+                    <table id="users-table">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="data-section">
+                    <h2>Orders</h2>
+                    <div class="filters">
+                        <select id="user-filter">
+                            <option value="">All Users</option>
+                        </select>
+                    </div>
+                    <table id="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>User ID</th>
+                                <th>Product</th>
+                                <th>Status</th>
+                                <th>Est. Delivery</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="data-section">
+                    <h2>Sent Emails</h2>
+                    <button id="refresh-emails-btn">Refresh</button>
+                    <div id="sent-emails-container">
+                        <p class="placeholder">No emails sent yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Human Queue Tab -->
+        <section id="queue-tab" class="tab-content">
+            <h2>Human Review Queue</h2>
+            <button id="refresh-queue-btn">Refresh Queue</button>
+            <div id="queue-container">
+                <p class="placeholder">No items in queue.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Shamazon Customer Support Agent Demo | Built with LangGraph + FastAPI</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/components/emailForm.js"></script>
+    <script src="js/components/responseViewer.js"></script>
+    <script src="js/components/graphViewer.js"></script>
+    <script src="js/components/traceViewer.js"></script>
+    <script src="js/components/dataViewer.js"></script>
+    <script src="js/components/queueViewer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

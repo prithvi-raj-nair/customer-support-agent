@@ -1,0 +1,9 @@
+{
+  "users": [
+    {"user_id": "usr_001", "email": "john.doe@email.com", "name": "John Doe"},
+    {"user_id": "usr_002", "email": "jane.smith@email.com", "name": "Jane Smith"},
+    {"user_id": "usr_003", "email": "bob.wilson@email.com", "name": "Bob Wilson"},
+    {"user_id": "usr_004", "email": "alice.jones@email.com", "name": "Alice Jones"},
+    {"user_id": "usr_005", "email": "charlie.brown@email.com", "name": "Charlie Brown"}
+  ]
+}

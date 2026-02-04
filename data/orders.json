@@ -1,0 +1,94 @@
+{
+  "orders": [
+    {
+      "order_id": "ORD-2026-001234",
+      "user_id": "usr_001",
+      "product_name": "Wireless Bluetooth Headphones",
+      "status": "shipped",
+      "tracking_number": "1Z999AA10123456784",
+      "estimated_delivery": "2026-02-08",
+      "order_date": "2026-02-01T16:30:00Z",
+      "total_amount": 79.99
+    },
+    {
+      "order_id": "ORD-2026-001235",
+      "user_id": "usr_001",
+      "product_name": "USB-C Charging Cable 3-Pack",
+      "status": "delivered",
+      "tracking_number": "1Z999AA10123456785",
+      "estimated_delivery": "2026-01-30",
+      "order_date": "2026-01-25T10:15:00Z",
+      "total_amount": 19.99
+    },
+    {
+      "order_id": "ORD-2026-001236",
+      "user_id": "usr_002",
+      "product_name": "Smart Watch Series 5",
+      "status": "processing",
+      "tracking_number": null,
+      "estimated_delivery": "2026-02-10",
+      "order_date": "2026-02-03T14:20:00Z",
+      "total_amount": 299.99
+    },
+    {
+      "order_id": "ORD-2026-001237",
+      "user_id": "usr_002",
+      "product_name": "Laptop Stand Adjustable",
+      "status": "shipped",
+      "tracking_number": "1Z999AA10123456787",
+      "estimated_delivery": "2026-02-06",
+      "order_date": "2026-02-01T09:00:00Z",
+      "total_amount": 45.99
+    },
+    {
+      "order_id": "ORD-2026-001238",
+      "user_id": "usr_003",
+      "product_name": "Mechanical Keyboard RGB",
+      "status": "delivered",
+      "tracking_number": "1Z999AA10123456788",
+      "estimated_delivery": "2026-01-28",
+      "order_date": "2026-01-22T11:30:00Z",
+      "total_amount": 129.99
+    },
+    {
+      "order_id": "ORD-2026-001239",
+      "user_id": "usr_003",
+      "product_name": "Gaming Mouse Wireless",
+      "status": "out_for_delivery",
+      "tracking_number": "1Z999AA10123456789",
+      "estimated_delivery": "2026-02-04",
+      "order_date": "2026-01-30T16:45:00Z",
+      "total_amount": 69.99
+    },
+    {
+      "order_id": "ORD-2026-001240",
+      "user_id": "usr_004",
+      "product_name": "Portable Bluetooth Speaker",
+      "status": "cancelled",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "order_date": "2026-02-02T08:00:00Z",
+      "total_amount": 49.99
+    },
+    {
+      "order_id": "ORD-2026-001241",
+      "user_id": "usr_004",
+      "product_name": "Webcam HD 1080p",
+      "status": "shipped",
+      "tracking_number": "1Z999AA10123456791",
+      "estimated_delivery": "2026-02-07",
+      "order_date": "2026-02-03T12:00:00Z",
+      "total_amount": 59.99
+    },
+    {
+      "order_id": "ORD-2026-001242",
+      "user_id": "usr_005",
+      "product_name": "Noise Cancelling Earbuds",
+      "status": "processing",
+      "tracking_number": null,
+      "estimated_delivery": "2026-02-09",
+      "order_date": "2026-02-04T15:30:00Z",
+      "total_amount": 149.99
+    }
+  ]
+}

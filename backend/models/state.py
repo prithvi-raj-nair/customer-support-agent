@@ -21,7 +21,7 @@ class AgentState(TypedDict):
     final_response: Optional[str]
 
     # Routing
-    route: Literal["main_agent", "human_queue", "default_response", "send_email"]
+    route: Literal["main_agent", "human_queue", "default_response", "send_email", "output_guardrail"]
     escalation_reason: Optional[str]
 
     # Execution trace (append-only)
@@ -33,3 +33,6 @@ class AgentState(TypedDict):
     # Validated sender email for tool validation
     validated_sender_email: Optional[str]
     validated_user_id: Optional[str]
+
+    # LLM conversation messages (append-only, used by main agent tool loop)
+    messages: Annotated[list, operator.add]
